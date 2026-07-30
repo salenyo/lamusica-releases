@@ -61,5 +61,5 @@ jobs:
           releaseName: "lamusica v__VERSION__"
           releaseBody: "Beta build. Приложение обновится само при следующем запуске."
           releaseDraft: false
-          prerelease: true
+          prerelease: false
           args: ${{ matrix.args }}
