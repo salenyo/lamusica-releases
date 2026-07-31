@@ -50,6 +50,7 @@ YouTube, SoundCloud, Spotify, Яндекс.Музыка — один поиск,
 | **Windows** | `lamusica-app_<версия>_x64-setup.exe` | обычный установщик |
 | **macOS** | `lamusica-app_<версия>_universal.dmg` | при первом запуске: правый клик → **Open** |
 | **Linux** | `.AppImage`, `.deb` или `.rpm` | AppImage нужно сделать исполняемым: `chmod +x` |
+| **Arch Linux** | `lamusica-app_<версия>_x86_64-linux.tar.gz` | распаковать и запустить `./lamusica-app` либо `sudo ./install.sh`; зависимости: `pacman -S webkit2gtk-4.1 alsa-lib`. Обновляется вручную |
 
 <div align="center">
 
