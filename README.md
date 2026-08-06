@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="docs/logo.svg" width="76" alt="lamusica">
+<img src="docs/logo.svg" width="76" alt="Rhytmix">
 
-# lamusica
+# Rhytmix
 
 Десктопный плеер: поиск и прослушивание из YouTube, SoundCloud, Spotify и
 Яндекс.Музыки в одном приложении.
 
-[![скачать](https://img.shields.io/github/v/release/salenyo/lamusica-releases?label=%E2%AC%87%20%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C&color=0a84ff&style=for-the-badge)](https://github.com/salenyo/lamusica-releases/releases/latest)
-[![платформы](https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-6e6e73?style=for-the-badge)](https://github.com/salenyo/lamusica-releases/releases/latest)
+[![скачать](https://img.shields.io/github/v/release/salenyo/rhytmix-releases?label=%E2%AC%87%20%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C&color=0a84ff&style=for-the-badge)](https://github.com/salenyo/rhytmix-releases/releases/latest)
+[![платформы](https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-6e6e73?style=for-the-badge)](https://github.com/salenyo/rhytmix-releases/releases/latest)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/preview-dark.svg">
-  <img src="docs/preview-light.svg" alt="Интерфейс lamusica" width="100%">
+  <img src="docs/preview-light.svg" alt="Интерфейс Rhytmix" width="100%">
 </picture>
 
 </div>
@@ -32,14 +32,14 @@
 
 | ОС | Файл | Примечание |
 |----|------|------------|
-| **Windows** | `lamusica-app_<версия>_x64-setup.exe` | обычный установщик |
-| **macOS** | `lamusica-app_<версия>_universal.dmg` | при первом запуске: правый клик → **Open** |
+| **Windows** | `rhytmix-app_<версия>_x64-setup.exe` | обычный установщик |
+| **macOS** | `rhytmix-app_<версия>_universal.dmg` | при первом запуске: правый клик → **Open** |
 | **Linux** | `.AppImage`, `.deb` или `.rpm` | AppImage нужно сделать исполняемым: `chmod +x` |
-| **Arch Linux** | `lamusica-app_<версия>_x86_64-linux.tar.gz` | распаковать и запустить `./lamusica-app` либо `sudo ./install.sh`; зависимости: `pacman -S webkit2gtk-4.1 alsa-lib`. Обновляется вручную |
+| **Arch Linux** | `rhytmix-app_<версия>_x86_64-linux.tar.gz` | распаковать и запустить `./rhytmix-app` либо `sudo ./install.sh`; зависимости: `pacman -S webkit2gtk-4.1 alsa-lib`. Обновляется вручную |
 
 <div align="center">
 
-### [⬇ Скачать последнюю версию](https://github.com/salenyo/lamusica-releases/releases/latest)
+### [⬇ Скачать последнюю версию](https://github.com/salenyo/rhytmix-releases/releases/latest)
 
 </div>
 
@@ -57,6 +57,6 @@
 <div align="center">
 
 Проект в стадии **беты**. Нашли проблему или есть идея —
-[заведите issue](https://github.com/salenyo/lamusica-releases/issues).
+[заведите issue](https://github.com/salenyo/rhytmix-releases/issues).
 
 </div>

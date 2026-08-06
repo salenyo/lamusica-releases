@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: "lamusica-app tag or branch to build"
+        description: "rhytmix-app tag or branch to build"
         required: true
         default: main
 
@@ -30,7 +30,7 @@ jobs:
       - name: Checkout app source (private)
         uses: actions/checkout@v4
         with:
-          repository: salenyo/lamusica-app
+          repository: salenyo/rhytmix-app
           ref: ${{ github.event.inputs.ref }}
           ssh-key: ${{ secrets.SOURCE_KEY }}
 
@@ -58,7 +58,7 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
         with:
           tagName: v__VERSION__
-          releaseName: "lamusica v__VERSION__"
+          releaseName: "Rhytmix v__VERSION__"
           releaseBody: "Beta build. Приложение обновится само при следующем запуске."
           releaseDraft: false
           prerelease: false
@@ -71,17 +71,17 @@ jobs:
         run: |
           set -e
           VERSION=$(node -p "require('./package.json').version")
-          STAGE="lamusica-app_${VERSION}_x86_64-linux"
+          STAGE="rhytmix-app_${VERSION}_x86_64-linux"
           mkdir -p "$STAGE"
-          cp src-tauri/target/release/lamusica-app "$STAGE/"
-          cp src-tauri/icons/128x128@2x.png "$STAGE/lamusica-app.png"
-          cat > "$STAGE/lamusica-app.desktop" <<'EOF'
+          cp src-tauri/target/release/rhytmix-app "$STAGE/"
+          cp src-tauri/icons/128x128@2x.png "$STAGE/rhytmix-app.png"
+          cat > "$STAGE/rhytmix-app.desktop" <<'EOF'
           [Desktop Entry]
           Type=Application
-          Name=lamusica
+          Name=Rhytmix
           Comment=Music from every source in one player
-          Exec=lamusica-app
-          Icon=lamusica-app
+          Exec=rhytmix-app
+          Icon=rhytmix-app
           Categories=AudioVideo;Audio;Player;
           Terminal=false
           EOF
@@ -89,15 +89,15 @@ jobs:
           #!/usr/bin/env sh
           set -e
           PREFIX="${PREFIX:-/usr/local}"
-          install -Dm755 lamusica-app "$PREFIX/bin/lamusica-app"
-          install -Dm644 lamusica-app.desktop "$PREFIX/share/applications/lamusica-app.desktop"
-          install -Dm644 lamusica-app.png "$PREFIX/share/icons/hicolor/256x256/apps/lamusica-app.png"
-          echo "lamusica installed to $PREFIX"
+          install -Dm755 rhytmix-app "$PREFIX/bin/rhytmix-app"
+          install -Dm644 rhytmix-app.desktop "$PREFIX/share/applications/rhytmix-app.desktop"
+          install -Dm644 rhytmix-app.png "$PREFIX/share/icons/hicolor/256x256/apps/rhytmix-app.png"
+          echo "Rhytmix installed to $PREFIX"
           EOF
           cat > "$STAGE/README.txt" <<'EOF'
-          lamusica for Arch Linux and other distributions.
+          Rhytmix for Arch Linux and other distributions.
 
-          Run directly:      ./lamusica-app
+          Run directly:      ./rhytmix-app
           Install system-wide: sudo ./install.sh
 
           Dependencies (Arch): pacman -S webkit2gtk-4.1 alsa-lib
